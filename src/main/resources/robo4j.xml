@@ -24,7 +24,7 @@
         <config name="com.robo4j.core.root">
             <value name="port" type="int">8025</value>
             <value name="target" type="String">controller</value>
-            <value name="packages" type="String">com.robo4j.lego.tank.example.codec</value>
+            <value name="packages" type="String">com.robo4j.lego.j1kids.example.codec</value>
             <targetUnits>
                 <value name="controller" type="String">GET</value>
             </targetUnits>
@@ -35,8 +35,8 @@
         <class>com.robo4j.units.lego.BrickButtonsUnit</class>
         <config name="com.robo4j.core.root">
             <value name="target" type="String">controller</value>
-            <value name="button_right" type="String">left</value>
-            <value name="button_left" type="String">right</value>
+            <value name="button_right" type="String">right</value>
+            <value name="button_left" type="String">left</value>
             <value name="button_up" type="String">down</value>
             <value name="button_down" type="String">up</value>
             <value name="button_enter" type="String">enter</value>
@@ -59,9 +59,9 @@
     <roboUnit id="platform">
         <class>com.robo4j.units.lego.SimpleTankUnit</class>
         <config name="com.robo4j.core.root">
-            <value name="leftMotorPort" type="String">C</value>
+            <value name="leftMotorPort" type="String">B</value>
             <value name="leftMotorType" type="Character">N</value>
-            <value name="rightMotorPort" type="String">B</value>
+            <value name="rightMotorPort" type="String">C</value>
             <value name="rightMotorType" type="Character">N</value>
         </config>
     </roboUnit>
