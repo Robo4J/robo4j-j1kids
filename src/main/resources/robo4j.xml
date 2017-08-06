@@ -59,9 +59,9 @@
     <roboUnit id="platform">
         <class>com.robo4j.units.lego.SimpleTankUnit</class>
         <config name="com.robo4j.core.root">
-            <value name="leftMotorPort" type="String">B</value>
+            <value name="leftMotorPort" type="String">C</value>
             <value name="leftMotorType" type="Character">N</value>
-            <value name="rightMotorPort" type="String">C</value>
+            <value name="rightMotorPort" type="String">B</value>
             <value name="rightMotorType" type="Character">N</value>
         </config>
     </roboUnit>

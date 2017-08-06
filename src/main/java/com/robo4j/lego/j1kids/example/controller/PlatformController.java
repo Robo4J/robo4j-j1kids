@@ -41,22 +41,12 @@ public class PlatformController extends RoboUnit<LegoPlatformMessageTypeEnum> {
 		super(LegoPlatformMessageTypeEnum.class, context, id);
 	}
 
-	/**
-	 * @param message
-	 *            accepted message
-	 * @return
-	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public void onMessage(LegoPlatformMessageTypeEnum message) {
 		processMessage(message);
 	}
 
-	/**
-	 * @param configuration
-	 *            desired configuration
-	 * @throws ConfigurationException
-	 */
 	@Override
 	protected void onInitialization(Configuration configuration) throws ConfigurationException {
 		target = configuration.getString("target", null);
