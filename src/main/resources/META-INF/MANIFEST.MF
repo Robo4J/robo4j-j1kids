@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Class-Path: .
+Main-Class: com.robo4j.lego.j1kids.example.Number42Main
