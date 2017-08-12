@@ -21,13 +21,16 @@
 package com.robo4j.lego.j1kids.example;
 
 import com.robo4j.core.RoboBuilder;
-import com.robo4j.core.RoboBuilderException;
 import com.robo4j.core.RoboContext;
 import com.robo4j.core.RoboReference;
 import com.robo4j.core.client.util.RoboClassLoader;
 import com.robo4j.hw.lego.util.EscapeButtonUtil;
+import com.robo4j.units.lego.enums.LegoPlatformMessageTypeEnum;
 
-import java.io.IOException;
+import javax.management.MBeanServer;
+import javax.management.ObjectName;
+import javax.management.StandardMBean;
+import java.lang.management.ManagementFactory;
 
 /**
  * @author Marcus Hirt (@hirt)
@@ -35,20 +38,25 @@ import java.io.IOException;
  */
 public class Number42Main {
 
-    public static void main(String[] args) throws RoboBuilderException, IOException {
+    public static void main(String[] args) throws Exception {
+
         Number42Main robot = new Number42Main();
         RoboContext system = robot.init();
         robot.shutdown(system);
+
+
     }
 
     private Number42Main() {
 
     }
 
-    RoboContext init() throws RoboBuilderException, IOException {
+    private RoboContext init() throws Exception {
         RoboBuilder builder = new RoboBuilder().add(RoboClassLoader.getInstance().getResource("robo4j.xml"));
         RoboContext system = builder.build();
         system.start();
+
+        initMBeanServer(system);
 
         RoboReference<String> lcd = system.getReference("lcd");
         lcd.sendMessage("Robo4J.io");
@@ -56,8 +64,19 @@ public class Number42Main {
         return system;
     }
 
-    void shutdown(RoboContext system) {
+    private void shutdown(RoboContext system) {
         EscapeButtonUtil.waitForPressAndRelease();
         system.shutdown();
     }
+
+    private void initMBeanServer(RoboContext system) throws Exception {
+        MBeanServer mBeanServer = ManagementFactory.getPlatformMBeanServer();
+        RoboReference<LegoPlatformMessageTypeEnum> cReference = system.getReference("controller");
+
+        ObjectName cName = ObjectName.getInstance("com.robo4j.lego.j1kids.example.controller:type=PlatformController");
+
+        StandardMBean mBean = new StandardMBean(cReference, RoboReference.class);
+        mBeanServer.registerMBean(mBean, cName);
+    }
+
 }

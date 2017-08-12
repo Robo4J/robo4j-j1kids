@@ -35,32 +35,32 @@ import com.robo4j.units.lego.platform.LegoPlatformMessage;
  */
 public class PlatformController extends RoboUnit<LegoPlatformMessageTypeEnum> {
 
-	private String target;
+    private String target;
 
-	public PlatformController(RoboContext context, String id) {
-		super(LegoPlatformMessageTypeEnum.class, context, id);
-	}
+    public PlatformController(RoboContext context, String id) {
+        super(LegoPlatformMessageTypeEnum.class, context, id);
+    }
 
-	@SuppressWarnings("unchecked")
-	@Override
-	public void onMessage(LegoPlatformMessageTypeEnum message) {
-		processMessage(message);
-	}
+    @SuppressWarnings("unchecked")
+    @Override
+    public void onMessage(LegoPlatformMessageTypeEnum message) {
+        processMessage(message);
+    }
 
-	@Override
-	protected void onInitialization(Configuration configuration) throws ConfigurationException {
-		target = configuration.getString("target", null);
-		if (target == null) {
-			throw ConfigurationException.createMissingConfigNameException("target");
-		}
-	}
+    @Override
+    protected void onInitialization(Configuration configuration) throws ConfigurationException {
+        target = configuration.getString("target", null);
+        if (target == null) {
+            throw ConfigurationException.createMissingConfigNameException("target");
+        }
+    }
 
-	// Private Methods
-	private void sendMessage(RoboContext ctx, LegoPlatformMessage message) {
-		ctx.getReference(target).sendMessage(message);
-	}
+    // Private Methods
+    private void sendMessage(RoboContext ctx, LegoPlatformMessage message) {
+        ctx.getReference(target).sendMessage(message);
+    }
 
-	private void processMessage(LegoPlatformMessageTypeEnum myMessage) {
-		sendMessage(getContext(), new LegoPlatformMessage(myMessage));
-	}
+    private void processMessage(LegoPlatformMessageTypeEnum myMessage) {
+        sendMessage(getContext(), new LegoPlatformMessage(myMessage));
+    }
 }
