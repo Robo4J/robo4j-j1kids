@@ -1,8 +1,8 @@
 <!--
   ~ Copyright (C) 2017. Miroslav Kopecky
   ~ This robo4jCenter.xml  is part of robo4j.
-  ~ path: /Users/miroslavkopecky/GiTHub_MiroKopecky/robo4j-tools/compiler/robo4j-center/src/test/resources/robo4jCenter.xml
-  ~ module: robo4j-center_main
+  ~ path: /Users/miroslavkopecky/GiTHub_MiroKopecky/robo4j-j1kids/src/main/resources/robo4jCenter.xml
+  ~ module: robo4j-j1kids_main
   ~
   ~ robo4j is free software: you can redistribute it and/or modify
   ~ it under the terms of the GNU General Public License as published by
@@ -23,7 +23,7 @@
     <mainClass>Number42Main</mainClass>
     <robo4jLibrary>robo4j-units-lego-alpha-0.3.jar</robo4jLibrary>
     <outDirectory>out</outDirectory>
-    <jarFileName>Number42Robot</jarFileName>
+    <jarFileName>Number42RobotTest</jarFileName>
     <centerActions>upload,compile</centerActions>
     <deviceIP>10.0.1.1</deviceIP>
     <deviceType>lego</deviceType>

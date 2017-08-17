@@ -39,12 +39,9 @@ import java.lang.management.ManagementFactory;
 public class Number42Main {
 
     public static void main(String[] args) throws Exception {
-
         Number42Main robot = new Number42Main();
         RoboContext system = robot.init();
         robot.shutdown(system);
-
-
     }
 
     private Number42Main() {
