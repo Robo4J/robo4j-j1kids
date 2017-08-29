@@ -1,12 +1,4 @@
 <robo4j>
-    <roboSystem id="mySystem">
-        <config name="com.robo4j.core.root">
-            <value name="poolSizeScheduler" type="int">8</value>
-            <value name="poolSizeWorker" type="int">6</value>
-            <value name="poolSizeBlocking" type="int">2</value>
-        </config>
-    </roboSystem>
-
     <roboUnit id="http">
         <class>com.robo4j.socket.http.units.HttpServerUnit</class>
         <config name="com.robo4j.core.root">

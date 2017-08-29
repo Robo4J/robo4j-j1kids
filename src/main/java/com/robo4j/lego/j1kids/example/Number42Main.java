@@ -45,7 +45,9 @@ public class Number42Main {
     }
 
     private RoboContext init() throws Exception {
-        RoboBuilder builder = new RoboBuilder().add(Thread.currentThread().getContextClassLoader().getResourceAsStream("robo4j.xml"));
+
+        RoboBuilder builder = new RoboBuilder(Thread.currentThread().getContextClassLoader().getResourceAsStream("robo4jSystem.xml"));
+        builder.add(Thread.currentThread().getContextClassLoader().getResourceAsStream("robo4jUnits.xml"));
         RoboContext system = builder.build();
         system.start();
         initMBeanServer(system);
