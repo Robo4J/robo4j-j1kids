@@ -17,9 +17,9 @@
 
 package com.robo4j.lego.j1kids.example;
 
-import com.robo4j.core.RoboBuilder;
-import com.robo4j.core.RoboContext;
-import com.robo4j.core.RoboReference;
+import com.robo4j.RoboBuilder;
+import com.robo4j.RoboContext;
+import com.robo4j.RoboReference;
 import com.robo4j.hw.lego.util.EscapeButtonUtil;
 import com.robo4j.units.lego.enums.LegoPlatformMessageTypeEnum;
 

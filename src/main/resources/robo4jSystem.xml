@@ -15,9 +15,9 @@
   ~ along with Robo4J. If not, see <http://www.gnu.org/licenses/>.
   -->
 <roboSystem id="j14KidsSystem">
-    <config name="com.robo4j.core.root">
+    <config name="com.robo4j.root">
         <value name="poolSizeScheduler" type="int">8</value>
         <value name="poolSizeWorker" type="int">8</value>
-        <value name="poolSizeBlocking" type="int">1</value>
+        <value name="poolSizeBlocking" type="int">10</value>
     </config>
 </roboSystem>

@@ -1,7 +1,7 @@
 <robo4j>
     <roboUnit id="http">
         <class>com.robo4j.socket.http.units.HttpServerUnit</class>
-        <config name="com.robo4j.core.root">
+        <config name="com.robo4j.root">
             <value name="port" type="int">8025</value>
             <value name="target" type="String">controller</value>
             <value name="packages" type="String">com.robo4j.lego.j1kids.example.codec</value>
@@ -11,7 +11,7 @@
 
     <roboUnit id="buttons">
         <class>com.robo4j.units.lego.BrickButtonsUnit</class>
-        <config name="com.robo4j.core.root">
+        <config name="com.robo4j.root">
             <value name="target" type="String">controller</value>
             <value name="button_right" type="String">left</value>
             <value name="button_left" type="String">right</value>
@@ -23,40 +23,40 @@
 
     <roboUnit id="lcd">
         <class>com.robo4j.units.lego.LcdUnit</class>
-        <config name="com.robo4j.core.root">
+        <config name="com.robo4j.root">
         </config>
     </roboUnit>
 
     <roboUnit id="controller">
         <class>com.robo4j.lego.j1kids.example.controller.PlatformController</class>
-        <config name="com.robo4j.core.root">
+        <config name="com.robo4j.root">
             <value name="target" type="String">platform</value>
         </config>
     </roboUnit>
 
     <roboUnit id="weaponController">
         <class>com.robo4j.lego.j1kids.example.controller.WeaponController</class>
-        <config name="com.robo4j.core.root">
+        <config name="com.robo4j.root">
             <value name="target" type="String">weapon</value>
         </config>
     </roboUnit>
 
     <roboUnit id="touchUnit">
         <class>com.robo4j.units.lego.TouchUnit</class>
-        <config name="com.robo4j.core.root">
+        <config name="com.robo4j.root">
             <value name="target" type="String">weaponController</value>
         </config>
     </roboUnit>
 
     <roboUnit id="weapon">
         <class>com.robo4j.units.lego.SingleMotorUnit</class>
-        <config name="com.robo4j.core.root">
+        <config name="com.robo4j.root">
         </config>
     </roboUnit>
 
     <roboUnit id="platform">
         <class>com.robo4j.units.lego.SimpleTankUnit</class>
-        <config name="com.robo4j.core.root">
+        <config name="com.robo4j.root">
             <value name="leftMotorPort" type="String">B</value>
             <value name="leftMotorType" type="Character">N</value>
             <value name="rightMotorPort" type="String">C</value>
