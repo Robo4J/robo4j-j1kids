@@ -20,6 +20,7 @@ package com.robo4j.lego.j1kids.example.controller;
 import com.robo4j.ConfigurationException;
 import com.robo4j.RoboContext;
 import com.robo4j.RoboUnit;
+import com.robo4j.WorkTrait;
 import com.robo4j.configuration.Configuration;
 import com.robo4j.units.lego.enums.LegoPlatformMessageTypeEnum;
 import com.robo4j.units.lego.platform.LegoPlatformMessage;
@@ -30,6 +31,7 @@ import com.robo4j.units.lego.platform.LegoPlatformMessage;
  * @author Marcus Hirt (@hirt)
  * @author Miro Wengner (@miragemiko)
  */
+@WorkTrait
 public class PlatformController extends RoboUnit<LegoPlatformMessageTypeEnum> {
 
     private String target;
