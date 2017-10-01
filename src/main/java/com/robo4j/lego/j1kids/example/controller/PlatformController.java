@@ -40,7 +40,6 @@ public class PlatformController extends RoboUnit<LegoPlatformMessageTypeEnum> {
         super(LegoPlatformMessageTypeEnum.class, context, id);
     }
 
-    @SuppressWarnings("unchecked")
     @Override
     public void onMessage(LegoPlatformMessageTypeEnum message) {
         processMessage(message);

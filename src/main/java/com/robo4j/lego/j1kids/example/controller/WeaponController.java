@@ -35,7 +35,6 @@ public class WeaponController extends RoboUnit<MotorRotationEnum> {
         super(MotorRotationEnum.class, context, id);
     }
 
-    @SuppressWarnings("unchecked")
     @Override
     public void onMessage(MotorRotationEnum message) {
         processMessage(message);
