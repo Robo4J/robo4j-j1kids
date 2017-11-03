@@ -21,7 +21,7 @@ import com.robo4j.ConfigurationException;
 import com.robo4j.RoboContext;
 import com.robo4j.RoboUnit;
 import com.robo4j.configuration.Configuration;
-import com.robo4j.units.lego.platform.MotorRotationEnum;
+import com.robo4j.units.lego.enums.MotorRotationEnum;
 
 /**
  * @author Marcus Hirt (@hirt)

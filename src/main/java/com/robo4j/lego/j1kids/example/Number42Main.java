@@ -50,7 +50,7 @@ public class Number42Main {
         builder.add(Thread.currentThread().getContextClassLoader().getResourceAsStream("robo4jUnits.xml"));
         RoboContext system = builder.build();
         system.start();
-        initMBeanServer(system);
+//        initMBeanServer(system);
 
         RoboReference<String> lcd = system.getReference("lcd");
         lcd.sendMessage("Robo4J.io");
